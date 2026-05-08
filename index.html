@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0F0E14" />
+    <meta name="color-scheme" content="dark" />
+    <title>aaam.dev</title>
+    <meta name="description" content="aaam.dev — calm, private apps for the things that matter." />
+    <style>
+      :root {
+        --bg: #0f0e14;
+        --surface: #17151e;
+        --card: #1e1c27;
+        --border: #2e2938;
+        --text: #faf7f4;
+        --muted: #ada7b3;
+        --dim: #767089;
+        --primary: #e8a09a;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .brand {
+        font-size: 2.4rem;
+        font-weight: 200;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+      }
+
+      .tagline {
+        font-size: 0.95rem;
+        font-weight: 300;
+        color: var(--muted);
+        margin-bottom: 3rem;
+      }
+
+      .apps {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .app-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 1.5rem;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        text-decoration: none;
+        color: var(--text);
+        transition: border-color 0.2s ease, transform 0.15s ease;
+      }
+
+      .app-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-1px);
+      }
+
+      .app-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(232, 160, 154, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+      }
+
+      .app-info {
+        text-align: left;
+      }
+
+      .app-name {
+        font-size: 1.05rem;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+      }
+
+      .app-desc {
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: var(--dim);
+        margin-top: 0.15rem;
+      }
+
+      .footer {
+        margin-top: 3rem;
+        font-size: 0.75rem;
+        color: var(--dim);
+      }
+
+      .footer a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="brand">aaam.dev</h1>
+      <p class="tagline">calm, private apps for the things that matter.</p>
+
+      <div class="apps">
+        <a href="/humm/" class="app-card">
+          <div class="app-icon">♡</div>
+          <div class="app-info">
+            <div class="app-name">hum · rituals</div>
+            <div class="app-desc">your relationship's private corner</div>
+          </div>
+        </a>
+      </div>
+
+      <p class="footer"><a href="mailto:support@aaam.dev">support@aaam.dev</a></p>
+    </div>
+  </body>
+</html>
