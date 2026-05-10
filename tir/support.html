@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B0B12" />
+    <meta name="color-scheme" content="dark" />
+    <title>support &middot; tir</title>
+    <meta name="description" content="support and FAQ for tir, a fast-paced word race." />
+    <link rel="icon" type="image/png" sizes="1024x1024" href="images/icon-1024.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page-doc">
+    <header class="topbar">
+      <a href="index.html" class="brand" aria-label="back to tir home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">tir</span>
+      </a>
+      <nav class="topnav" aria-label="primary">
+        <a href="index.html">home</a>
+        <a href="support.html">support</a>
+        <a href="privacy.html">privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>support</h1>
+      <p class="meta">tir &middot; word race</p>
+
+      <div class="card">
+        <h2>Contact</h2>
+        <p>For account help, data deletion, bug reports, or anything else:</p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:support@aaam.dev">support@aaam.dev</a>
+        </p>
+        <p class="meta">aaam.dev · last updated may 10, 2026</p>
+      </div>
+
+      <div class="card">
+        <h2>Delete your account</h2>
+        <p>You can delete your account and all linked data directly from the app:</p>
+        <ol>
+          <li>Open tir.</li>
+          <li>Scroll to the bottom of the home screen.</li>
+          <li>Tap the red &ldquo;delete account&rdquo; button.</li>
+          <li>Confirm in the alert.</li>
+        </ol>
+        <p>
+          This permanently removes your Firebase Authentication record,
+          your user profile (display name, avatar, Elo, streaks, rounds
+          played), your public leaderboard entry, and your active room
+          memberships. See <a href="privacy.html">privacy</a> for the
+          full list.
+        </p>
+        <p>If you cannot access the app, email <a href="mailto:support@aaam.dev">support@aaam.dev</a> and we will process the deletion within 7 days.</p>
+      </div>
+
+      <div class="card">
+        <h2>FAQ</h2>
+
+        <p><strong>How do I play?</strong></p>
+        <p>
+          A target word appears at the top of the screen. You see four
+          options. Pick the option whose meaning is closest to the
+          target. Your &ldquo;current word&rdquo; updates to that pick,
+          and a new set of four options appears. Keep picking toward the
+          target. The first player to land on the target word wins the
+          round.
+        </p>
+
+        <p><strong>What does &ldquo;closest meaning&rdquo; mean?</strong></p>
+        <p>
+          tir uses semantic similarity (vector embeddings under the
+          hood). Two words are &ldquo;close&rdquo; if their meanings
+          overlap, regardless of spelling. <em>cat</em> and
+          <em>tiger</em> are close. <em>cat</em> and <em>cathedral</em>
+          are not. Closer pick = bigger leap toward the target.
+        </p>
+
+        <p><strong>What is the global room?</strong></p>
+        <p>
+          One always-running room that everyone plays in. Drop in any
+          time, win Elo, leave when you want. The next round starts
+          every 90 seconds or so, depending on how fast someone wins.
+        </p>
+
+        <p><strong>What is a private room?</strong></p>
+        <p>
+          A room you create with a 4-character join code. Share the
+          code with friends to race head-to-head. Private rooms have
+          four difficulty levels (chill, normal, hard, brutal) and do
+          NOT change your global Elo &mdash; perfect for practice or
+          casual games with friends.
+        </p>
+
+        <p><strong>What is the placement period?</strong></p>
+        <p>
+          Your first 5 rounds are a calibration period. Your real Elo
+          rating is being computed in the background, but the app shows
+          &ldquo;Calibrating N/5&rdquo; instead of a number to keep
+          early volatility quiet. After round 5 your tier badge and
+          numeric rating appear.
+        </p>
+
+        <p><strong>How does Elo work?</strong></p>
+        <p>
+          Pure pairwise Elo. You gain rating by beating opponents who
+          are rated near or above you. Losing to someone much stronger
+          barely costs you. Beating someone much weaker barely earns
+          you anything. It's the same math chess uses.
+        </p>
+
+        <p><strong>What if I'm playing alone in the global room?</strong></p>
+        <p>
+          You still earn Elo, with diminishing returns per day:
+          +8 / +4 / +2 / +1 / +1 ... so solo play keeps the climb
+          alive at off-peak times but cannot be farmed into a viable
+          ladder strategy.
+        </p>
+
+        <p><strong>How do I sign in on a new device?</strong></p>
+        <p>
+          tir uses anonymous accounts tied to your installation. There
+          is no &ldquo;sign in&rdquo; flow today. Account portability
+          (link to Apple / Google) is on the roadmap.
+        </p>
+
+        <p><strong>Where is my data stored?</strong></p>
+        <p>On Google Firebase (Authentication + Firestore + Cloud Functions). See the <a href="privacy.html">privacy policy</a>.</p>
+
+        <p><strong>Are there ads or in-app purchases?</strong></p>
+        <p>No. tir is free, with no ads and no in-app purchases.</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">tir &middot; word race</p>
+      <nav aria-label="footer">
+        <a href="index.html">home</a>
+        <a href="privacy.html">privacy</a>
+        <a href="mailto:support@aaam.dev">contact</a>
+      </nav>
+      <p class="footer-meta">aaam.dev &middot; updated may 10, 2026</p>
+    </footer>
+  </body>
+</html>
