@@ -1,7 +1,7 @@
 # aaam.dev — studio website
 
 Public-facing website for **aaam.dev**, hosted on **Cloudflare Pages**.
-Each app gets its own subdirectory (e.g. `/humm/`).
+Each app gets its own subdirectory (e.g. `/hum/`).
 
 ---
 
@@ -10,9 +10,17 @@ Each app gets its own subdirectory (e.g. `/humm/`).
 | URL | What |
 |---|---|
 | `https://aaam.dev` | Studio landing page |
-| `https://aaam.dev/humm/` | Hum - rituals marketing page |
-| `https://aaam.dev/humm/support.html` | Hum support + FAQ + account deletion |
-| `https://aaam.dev/humm/privacy.html` | Hum privacy policy |
+| `https://aaam.dev/hum/` | Hum - rituals marketing page |
+| `https://aaam.dev/hum/support.html` | Hum support + FAQ + account deletion |
+| `https://aaam.dev/hum/privacy.html` | Hum privacy policy |
+| `https://aaam.dev/tir/` | tir - word race marketing page |
+| `https://aaam.dev/tir/support.html` | tir support + FAQ |
+| `https://aaam.dev/tir/privacy.html` | tir privacy policy |
+
+Legacy `/humm/*` URLs 301-redirect to `/hum/*` via `_redirects`. Update
+App Store Connect / Play Console for the **hum** app to use the new
+`/hum/...` URLs (the old ones still work, but App Review may eventually
+flag the redirect chain).
 
 ---
 
@@ -43,9 +51,9 @@ Each app gets its own subdirectory (e.g. `/humm/`).
 | **Bundle ID** | `com.humtum.app` |
 | **EAS Project ID** | `30c5357d-ddd0-490b-a158-fd22c872392e` |
 | **App repo** | `github.com/4m4n5/humm` |
-| **Support URL** | `https://aaam.dev/humm/support.html` |
-| **Privacy URL** | `https://aaam.dev/humm/privacy.html` |
-| **Marketing URL** | `https://aaam.dev/humm/` |
+| **Support URL** | `https://aaam.dev/hum/support.html` |
+| **Privacy URL** | `https://aaam.dev/hum/privacy.html` |
+| **Marketing URL** | `https://aaam.dev/hum/` |
 
 ---
 
@@ -54,7 +62,7 @@ Each app gets its own subdirectory (e.g. `/humm/`).
 ```
 aaam.dev/
 ├── index.html              ← studio landing page
-├── humm/                   ← Hum - rituals store pages
+├── hum/                    ← Hum - rituals store pages (dir is `hum/`; brand is "hum")
 │   ├── index.html          ← marketing / product overview
 │   ├── support.html        ← support + FAQ + account deletion
 │   ├── privacy.html        ← privacy policy
@@ -104,7 +112,7 @@ cd /path/to/aaam.dev && python3 -m http.server 8765
 ```
 
 Open `http://localhost:8765` for the landing page,
-`http://localhost:8765/humm/` for the Hum pages.
+`http://localhost:8765/hum/` for the Hum pages.
 
 ---
 

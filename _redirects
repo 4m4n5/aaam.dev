@@ -1,0 +1,10 @@
+# Cloudflare Workers Static Assets / Pages redirects.
+# Format: <source> <destination> <status>
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# 2026-05-10: humm/ → hum/ (URL slug converged with displayed brand "hum").
+# Anyone who shared an old link, or anyone who hasn't yet updated their
+# App Store Connect Marketing/Support/Privacy URLs, still lands on the
+# right page. 301 = permanent so search engines update their indexes.
+/humm/ /hum/ 301
+/humm/* /hum/:splat 301
