@@ -7,6 +7,8 @@
     <meta name="color-scheme" content="dark" />
     <title>aaam.dev</title>
     <meta name="description" content="aaam.dev — calm, private apps for the things that matter." />
+    <link rel="icon" type="image/png" sizes="32x32" href="/humm/images/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/humm/images/icon-180.png" />
     <style>
       :root {
         --bg: #0f0e14;
@@ -82,13 +84,10 @@
       .app-icon {
         width: 44px;
         height: 44px;
-        border-radius: 12px;
-        background: rgba(232, 160, 154, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
+        border-radius: 11px;
         flex-shrink: 0;
+        display: block;
+        object-fit: cover;
       }
 
       .app-info {
@@ -131,14 +130,14 @@
 
       <div class="apps">
         <a href="/humm/" class="app-card">
-          <div class="app-icon">♡</div>
+          <img class="app-icon" src="/humm/images/icon-1024.png" alt="" width="44" height="44" loading="lazy" decoding="async" />
           <div class="app-info">
             <div class="app-name">hum · rituals</div>
             <div class="app-desc">your relationship's private corner</div>
           </div>
         </a>
         <a href="/tir/" class="app-card">
-          <div class="app-icon">◎</div>
+          <img class="app-icon" src="/tir/images/icon-1024.png" alt="" width="44" height="44" loading="lazy" decoding="async" />
           <div class="app-info">
             <div class="app-name">tir · word race</div>
             <div class="app-desc">race the room to the target word</div>

@@ -156,16 +156,12 @@ main {
 .brand-mark {
   width: 22px;
   height: 22px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 35% 30%,
-    #f6c5c0 0%,
-    var(--primary) 55%,
-    #b97c77 100%
-  );
+  border-radius: 5px;
+  display: block;
+  object-fit: cover;
   box-shadow:
-    0 0 0 1px rgba(232, 160, 154, 0.35),
-    0 0 18px rgba(232, 160, 154, 0.45);
+    0 0 0 1px rgba(232, 160, 154, 0.25),
+    0 0 18px rgba(232, 160, 154, 0.35);
 }
 
 .brand-name {
