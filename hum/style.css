@@ -13,18 +13,19 @@
  */
 
 :root {
-  --bg: #0f0e14;
-  --surface: #17151e;
-  --card: #1e1c27;
-  --card-soft: #1a1822;
-  --border: #2e2938;
-  --border-soft: rgba(46, 41, 56, 0.55);
+  --bg: #0b0b12;
+  --surface: #13131c;
+  --card: #1a1924;
+  --card-soft: #16151f;
+  --border: #2a2535;
+  --border-soft: rgba(42, 37, 53, 0.55);
 
   --text: #faf7f4;
-  --muted: #ada7b3;
-  --dim: #767089;
+  --muted: #b0aab8;
+  --dim: #7a7490;
 
-  --primary: #e8a09a;
+  --primary: #ff8e9b;
+  --primary-warm: #ffb392;
   --secondary: #9fb8d2;
   --bloom: #a990c2;
   --spark: #9fb7ba;
@@ -86,9 +87,9 @@ body {
   background:
     radial-gradient(
       60% 60% at 50% 0%,
-      rgba(232, 160, 154, 0.22) 0%,
-      rgba(232, 160, 154, 0.1) 30%,
-      rgba(232, 160, 154, 0.03) 55%,
+      rgba(255, 142, 155, 0.18) 0%,
+      rgba(255, 179, 146, 0.08) 30%,
+      rgba(255, 142, 155, 0.02) 55%,
       transparent 75%
     );
   filter: blur(20px);
@@ -160,8 +161,8 @@ main {
   display: block;
   object-fit: cover;
   box-shadow:
-    0 0 0 1px rgba(232, 160, 154, 0.25),
-    0 0 18px rgba(232, 160, 154, 0.35);
+    0 0 0 1px rgba(255, 142, 155, 0.25),
+    0 0 18px rgba(255, 142, 155, 0.35);
 }
 
 .brand-name {
@@ -211,7 +212,7 @@ main {
 
 .hero-accent {
   display: inline-block;
-  background: linear-gradient(180deg, #f4b8b1 0%, var(--primary) 55%, #cc8b85 100%);
+  background: linear-gradient(180deg, var(--primary-warm) 0%, var(--primary) 55%, #cc7080 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -245,8 +246,8 @@ main {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(232, 160, 154, 0.32) 0%,
-    rgba(232, 160, 154, 0.12) 38%,
+    rgba(255, 142, 155, 0.28) 0%,
+    rgba(255, 179, 146, 0.1) 38%,
     transparent 70%
   );
   filter: blur(14px);
@@ -275,7 +276,7 @@ main {
   width: 100%;
   height: auto;
   border-radius: clamp(26px, calc(var(--phone-w) * 0.12), 38px);
-  border: 1px solid rgba(232, 160, 154, 0.22);
+  border: 1px solid rgba(255, 142, 155, 0.18);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
@@ -507,7 +508,7 @@ section h2 {
 
 .promise-accent {
   display: inline-block;
-  background: linear-gradient(180deg, #f4b8b1 0%, var(--primary) 55%, #cc8b85 100%);
+  background: linear-gradient(180deg, var(--primary-warm) 0%, var(--primary) 55%, #cc7080 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -522,8 +523,8 @@ section h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.7rem 1.4rem;
-  background: rgba(232, 160, 154, 0.04);
-  border: 1px solid rgba(232, 160, 154, 0.2);
+  background: rgba(255, 142, 155, 0.03);
+  border: 1px solid rgba(255, 142, 155, 0.18);
   border-radius: var(--radius-lg);
   font-size: clamp(0.95rem, 0.9rem + 0.4vw, 1.08rem);
   font-weight: 400;
