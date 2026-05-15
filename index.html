@@ -284,28 +284,37 @@
         border-radius: 2px;
       }
 
-      .badge {
-        display: inline-block;
-        margin-left: 0.35rem;
-        padding: 0.15rem 0.45rem;
-        font-size: 0.65rem;
-        font-weight: 500;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        border-radius: 999px;
-        vertical-align: middle;
+      .app-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        margin-top: 0.4rem;
+        font-size: 0.72rem;
+        font-weight: 300;
+        color: var(--muted);
+        letter-spacing: 0.005em;
+        line-height: 1;
       }
 
-      .badge--live {
-        background: rgba(255, 142, 155, 0.12);
-        color: var(--hum);
-        border: 1px solid rgba(255, 142, 155, 0.25);
+      .app-status-dot {
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent, var(--hum));
       }
 
-      .badge--soon {
-        background: rgba(0, 229, 255, 0.08);
-        color: var(--tir);
-        border: 1px solid rgba(0, 229, 255, 0.2);
+      .app-status--live .app-status-dot {
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent, var(--hum)) 18%, transparent);
+      }
+
+      .app-status--soon {
+        color: var(--dim);
+      }
+
+      .app-status--soon .app-status-dot {
+        background: transparent;
+        box-shadow: inset 0 0 0 1.25px var(--dim);
       }
 
       /* Entrance — one shot, staggered. No idle loops. */
@@ -343,7 +352,8 @@
           <img class="app-icon" src="/hum/images/icon-1024.png" alt="" width="48" height="48" loading="eager" decoding="async" />
           <div class="app-info">
             <div class="app-name">hum <span class="accent">· for two</span></div>
-            <div class="app-desc">a calm, private space for couples. <span class="badge badge--live">free on App Store</span></div>
+            <div class="app-desc">a calm, private space for couples.</div>
+            <div class="app-status app-status--live"><span class="app-status-dot" aria-hidden="true"></span>free on the App Store</div>
           </div>
           <span class="app-chevron" aria-hidden="true">→</span>
         </a>
@@ -351,7 +361,8 @@
           <img class="app-icon" src="/tir/images/icon-1024.png" alt="" width="48" height="48" loading="eager" decoding="async" />
           <div class="app-info">
             <div class="app-name">tir <span class="accent">· word race</span></div>
-            <div class="app-desc">race the room to the target word. <span class="badge badge--soon">coming soon</span></div>
+            <div class="app-desc">race the room to the target word.</div>
+            <div class="app-status app-status--soon"><span class="app-status-dot" aria-hidden="true"></span>coming soon</div>
           </div>
           <span class="app-chevron" aria-hidden="true">→</span>
         </a>
