@@ -316,6 +316,29 @@ main {
   margin-top: 1.2rem;
 }
 
+.cta-button--secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.cta-button--secondary:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 32px rgba(255, 142, 155, 0.12);
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.cta-group .cta-button {
+  margin-top: 0;
+}
+
 .cta-apple {
   flex-shrink: 0;
 }
