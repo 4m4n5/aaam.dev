@@ -1,6 +1,6 @@
-/* hum · rituals — marketing site
+/* hum: for two — marketing site
  * Single stylesheet for index.html, support.html, privacy.html.
- * Mobile-first. Matches the in-app design system (Wes Anderson Grand Budapest).
+ * Mobile-first. Matches the in-app design system.
  *
  * NOTE on .phone aspect ratio:
  *   We do NOT use `aspect-ratio: 1206/2622` on the `.phone` wrapper.
@@ -206,8 +206,9 @@ main {
   font-size: var(--t-h1);
   font-weight: 200;
   line-height: 1.04;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   color: var(--text);
+  text-wrap: balance;
 }
 
 .hero-accent {
@@ -221,11 +222,12 @@ main {
 
 .hero-sub {
   margin: clamp(0.85rem, 2vw, 1.1rem) auto 0;
-  max-width: 30ch;
+  max-width: 32ch;
   font-size: var(--t-sub);
   line-height: 1.45;
   color: var(--muted);
   font-weight: 300;
+  text-wrap: balance;
 }
 
 /* PHONE MOCKUP ────────────────────────────────────────────────────── */
@@ -285,12 +287,15 @@ main {
 }
 
 /* CTA BUTTON ─────────────────────────────────────────────────────── */
+/* Min-height 44px hits WCAG 2.2 + Apple HIG tap-target floors. */
 .cta-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
+  min-height: 48px;
   margin-top: clamp(1.8rem, 4vw, 2.4rem);
-  padding: 0.9rem 1.8rem;
+  padding: 0.85rem 1.6rem;
   background: var(--text);
   color: var(--bg);
   font-size: 0.95rem;
@@ -298,14 +303,20 @@ main {
   letter-spacing: -0.01em;
   border-radius: 999px;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 0 0 rgba(255, 142, 155, 0);
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cta-button:focus-visible {
   transform: translateY(-1px);
-  box-shadow: 0 8px 32px rgba(255, 142, 155, 0.2);
+  box-shadow: 0 8px 32px rgba(255, 142, 155, 0.22);
   opacity: 1;
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
 }
 
 .cta-button:active {
@@ -319,10 +330,11 @@ main {
 .cta-button--secondary {
   background: transparent;
   color: var(--text);
-  border: 1px solid var(--border);
+  border-color: var(--border);
 }
 
-.cta-button--secondary:hover {
+.cta-button--secondary:hover,
+.cta-button--secondary:focus-visible {
   border-color: var(--primary);
   box-shadow: 0 8px 32px rgba(255, 142, 155, 0.12);
 }
@@ -389,9 +401,16 @@ section h2 {
   text-align: center;
   font-size: var(--t-h2);
   font-weight: 200;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   line-height: 1.1;
   color: var(--text);
+  text-wrap: balance;
+}
+
+.features,
+.promise,
+.final-cta {
+  border-top: 1px solid var(--border-soft);
 }
 
 /* FEATURES ────────────────────────────────────────────────────────── */
@@ -436,6 +455,11 @@ section h2 {
   position: relative;
   isolation: isolate;
   backdrop-filter: blur(6px);
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
 }
 
 .feature::before {
@@ -760,6 +784,22 @@ body.page-doc strong {
   font-size: 0.8rem;
   color: var(--dim);
   margin-bottom: 1rem;
+}
+
+/* ENTRANCE ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .topbar       { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) both; }
+  .hero .eyebrow  { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.05s both; }
+  .hero h1     { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.1s both; }
+  .hero-sub    { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.15s both; }
+  .hero-stage  { animation: rise 0.8s cubic-bezier(.2,.7,.2,1) 0.22s both; }
+  .cta-group   { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.35s both; }
+  .trust-row   { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.42s both; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* REDUCE MOTION ──────────────────────────────────────────────────── */
