@@ -239,21 +239,42 @@ main {
   z-index: 1;
 }
 
-/* Soft halo behind hero phone */
-.hero-stage::before {
+/* Two-layer atmospheric halo — warm core + cooler outer atmosphere.
+ * Static. The depth makes the phone feel "lit in space" rather than
+ * "stickered onto a flat circle". */
+.hero-stage::before,
+.hero-stage::after {
   content: '';
   position: absolute;
-  width: clamp(280px, 80vw, 540px);
-  height: clamp(280px, 80vw, 540px);
   border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Outer atmosphere — large, soft, low-saturation; reads as ambient light. */
+.hero-stage::before {
+  width: clamp(360px, 100vw, 720px);
+  height: clamp(360px, 100vw, 720px);
   background: radial-gradient(
     circle,
-    rgba(255, 142, 155, 0.28) 0%,
-    rgba(255, 179, 146, 0.1) 38%,
+    rgba(255, 142, 155, 0.18) 0%,
+    rgba(169, 144, 194, 0.08) 35%,
     transparent 70%
   );
-  filter: blur(14px);
-  z-index: -1;
+  filter: blur(28px);
+}
+
+/* Warm core — tighter, brighter, anchored behind the phone. */
+.hero-stage::after {
+  width: clamp(260px, 70vw, 480px);
+  height: clamp(260px, 70vw, 480px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 142, 155, 0.34) 0%,
+    rgba(255, 179, 146, 0.16) 38%,
+    transparent 72%
+  );
+  filter: blur(16px);
 }
 
 /*
@@ -282,8 +303,31 @@ main {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
+/* Hero phone — bigger, layered shadow (dark grounding + accent glow),
+ * top-edge rim light. Apple-style "museum gallery" treatment. */
 .phone--hero {
-  --phone-w: clamp(210px, 60vw, 310px);
+  --phone-w: clamp(230px, 64vw, 360px);
+  filter:
+    drop-shadow(0 32px 80px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 0 28px rgba(255, 142, 155, 0.22));
+}
+
+/* Soft rim highlight on the top edge — suggests an overhead light
+ * source. Static, no animation. KB §restraint compliant. */
+.phone--hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: clamp(26px, calc(var(--phone-w) * 0.12), 38px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.04) 6%,
+    transparent 14%
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* CTA BUTTON ─────────────────────────────────────────────────────── */
@@ -792,7 +836,9 @@ body.page-doc strong {
   .hero .eyebrow  { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.05s both; }
   .hero h1     { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.1s both; }
   .hero-sub    { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.15s both; }
-  .hero-stage  { animation: rise 0.8s cubic-bezier(.2,.7,.2,1) 0.22s both; }
+  /* Hero stage gets a dedicated scale+rise — more cinematic arrival.
+   * One-shot, KB §restraint compliant (entrance stagger is allowed). */
+  .hero-stage  { animation: hero-arrive 0.95s cubic-bezier(.2,.7,.2,1) 0.22s both; }
   .cta-group   { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.35s both; }
   .trust-row   { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.42s both; }
 }
@@ -800,6 +846,11 @@ body.page-doc strong {
 @keyframes rise {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-arrive {
+  from { opacity: 0; transform: translateY(18px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* REDUCE MOTION ──────────────────────────────────────────────────── */
