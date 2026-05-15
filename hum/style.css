@@ -342,11 +342,12 @@ main {
   padding: 0.85rem 1.6rem;
   background: var(--text);
   color: var(--bg);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: -0.01em;
   border-radius: 999px;
   text-decoration: none;
+  white-space: nowrap;
   border: 1px solid transparent;
   transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
@@ -680,12 +681,61 @@ section h2 {
   opacity: 0.7;
 }
 
+/* MOBILE POLISH (≤480px) ─────────────────────────────────────────
+ * Surgical adjustments for phone-class viewports. Tightens padding,
+ * stacks CTAs full-width (KB §full-width mobile CTA pattern, +40%
+ * tap accuracy per getglued.co/manifestos/full-width-mobile-buttons),
+ * trims section rhythm. */
 @media (max-width: 480px) {
+  /* Promise card — already tightened, kept here for clarity */
   .promise-list {
     grid-template-columns: 1fr;
     max-width: 22rem;
     gap: 0.55rem;
-    padding: 1.2rem 1.4rem;
+    padding: 1.15rem 1.3rem;
+  }
+
+  /* Stack CTAs vertically, full-width inside their container.
+   * `white-space: nowrap` already on .cta-button prevents label wrap. */
+  .cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    max-width: 22rem;
+    margin-inline: auto;
+  }
+
+  .cta-group .cta-button {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.98rem;
+  }
+
+  /* Topbar — tighten padding so logo + nav don't feel adrift */
+  .topbar {
+    padding: 1rem 1.1rem;
+  }
+
+  /* Hero section — slightly tighter top/bottom rhythm on mobile */
+  .hero {
+    padding: 1.25rem 0 2rem;
+  }
+
+  /* Section vertical rhythm — Apple/Linear use ~36-40px on mobile,
+   * not the 48px our desktop scale produces. */
+  section {
+    padding: 2.5rem 0;
+  }
+
+  /* Final-cta needs slightly more breathing room than other sections */
+  .final-cta {
+    padding: 2.5rem 0 2rem;
+  }
+
+  /* Trust row — tighter horizontal gap on mobile */
+  .trust-row {
+    gap: 0.5rem 1rem;
+    font-size: 0.82rem;
   }
 }
 
