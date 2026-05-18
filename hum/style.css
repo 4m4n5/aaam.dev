@@ -587,6 +587,16 @@ section h2 {
   text-wrap: balance;
 }
 
+/* Inline accent on feature h3 — colors the bracketed feature word the
+ * same hue used in the v12 promotional deck (synced with
+ * humm/marketing/generate.py FRAMES). Inherits each card's
+ * --feature-tag-color cascade variable. */
+.feature-accent {
+  color: var(--feature-tag-color, var(--primary));
+  font-style: inherit;
+  font-weight: 400;
+}
+
 @media (min-width: 880px) {
   .feature-rail {
     overflow: visible;
