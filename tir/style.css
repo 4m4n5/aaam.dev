@@ -701,7 +701,11 @@ section h2 {
   font-size: clamp(2.4rem, 2rem + 3vw, 3.6rem);
   font-weight: 200;
   letter-spacing: -0.03em;
-  margin: 0 0 0.6rem;
+  /* `margin: 0 auto` preserves the auto-centering inherited from the
+   * generic `section h2` rule — without it, the 22ch-wide h2 block
+   * hugs the section's left edge on wide viewports even though its
+   * inner text is still centered. */
+  margin: 0 auto 0.6rem;
   text-wrap: balance;
 }
 
