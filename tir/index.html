@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#0B0B12" />
     <meta name="color-scheme" content="dark" />
-    <title>tir: word race</title>
+    <title>tir &middot; race the room to the target word</title>
     <meta
       name="description"
-      content="tir is a word race. a target word appears. pick toward the target — closest meaning, biggest leap. first to reach wins. one global room, real opponents."
+      content="tir is a fast-twitch live word race. a target word appears. pick toward it — closest meaning, biggest leap. first to reach the target wins. one global room, real opponents, pure pairwise Elo. no ads, no IAP, no signup."
     />
 
+    <!-- Open Graph (WhatsApp / iMessage / Facebook) -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="tir" />
-    <meta property="og:title" content="tir: word race — race the room to the target word" />
+    <meta property="og:site_name" content="tir &middot; word race" />
+    <meta property="og:title" content="tir · race the room to the target word" />
     <meta
       property="og:description"
-      content="pick toward the target. closest meaning, biggest leap. first to reach wins."
+      content="a target word appears. pick toward it — closest meaning, biggest leap. first to reach wins. one global room, real opponents."
     />
     <meta property="og:url" content="https://aaam.dev/tir/" />
     <meta property="og:image" content="https://aaam.dev/tir/images/og-cover.png" />
@@ -25,15 +26,20 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="tir app — race the room to the target word, on iPhone" />
 
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="tir: word race — race the room to the target word" />
-    <meta name="twitter:description" content="pick toward the target. first to reach wins." />
+    <meta name="twitter:title" content="tir · race the room to the target word" />
+    <meta
+      name="twitter:description"
+      content="pick toward the target. closest meaning, biggest leap. first to reach wins."
+    />
     <meta name="twitter:image" content="https://aaam.dev/tir/images/og-cover.png" />
 
     <link rel="canonical" href="https://aaam.dev/tir/" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="1024x1024" href="images/icon-1024.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png" />
+    <link rel="preload" as="image" href="images/screenshots/06-game.png" fetchpriority="high" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -46,29 +52,33 @@
         <span class="brand-name">tir</span>
       </a>
       <nav class="topnav" aria-label="primary">
+        <a href="#how">how it works</a>
+        <a href="#moments">moments</a>
         <a href="support.html">support</a>
         <a href="privacy.html">privacy</a>
       </nav>
     </header>
 
     <main id="top">
+      <!-- HERO -->
       <section class="hero">
-        <p class="eyebrow">word race</p>
+        <p class="eyebrow">tir &middot; word race</p>
         <h1>
           race the room<br />
-          <span class="hero-accent">to the target word.</span>
+          to the <span class="hero-accent">target word.</span>
         </h1>
         <p class="hero-sub">
-          pick toward the target. closest meaning, biggest leap. first to reach wins.
+          a target appears. pick toward it &mdash; closest meaning,
+          biggest leap. first to reach wins.
         </p>
 
         <div class="hero-stage">
-          <div class="phone">
+          <div class="phone phone--hero">
             <img
-              src="images/screen-game.png"
-              alt="tir game screen showing the target word and four options"
-              width="1320"
-              height="2868"
+              src="images/screenshots/06-game.png"
+              alt="tir live game screen — TARGET risk, breadcrumb from compassion, four options"
+              width="1206"
+              height="2622"
               loading="eager"
               fetchpriority="high"
               decoding="async"
@@ -78,8 +88,12 @@
 
         <div class="cta-group">
           <a href="mailto:support@aaam.dev?subject=tir%20testflight%20invite" class="cta-button" aria-label="Request a TestFlight invite for tir">
-            <svg class="cta-apple" width="18" height="18" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184 4 276.8c0 27.3 4.9 55.6 14.7 84.9 13.1 39.1 60.3 134.9 109.4 133.2 25.7-.6 43.8-18.3 77.3-18.3 32.4 0 49.2 18.3 77.3 17.7 48.3-.8 90.8-83.8 103.6-123 .2-.7.4-1.3.6-2-61.8-26.1-64.2-92.8-64.2-100.6zM256 50.9c29-33.8 26.6-65 25.8-76.3-25.8 1.5-55.6 17.3-72.8 37.3-18.8 21.7-29.8 48.5-27.5 77.3 28.6 2.2 55.9-13.3 74.5-38.3z"/></svg>
+            <svg class="cta-icon" width="18" height="18" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184 4 276.8c0 27.3 4.9 55.6 14.7 84.9 13.1 39.1 60.3 134.9 109.4 133.2 25.7-.6 43.8-18.3 77.3-18.3 32.4 0 49.2 18.3 77.3 17.7 48.3-.8 90.8-83.8 103.6-123 .2-.7.4-1.3.6-2-61.8-26.1-64.2-92.8-64.2-100.6zM256 50.9c29-33.8 26.6-65 25.8-76.3-25.8 1.5-55.6 17.3-72.8 37.3-18.8 21.7-29.8 48.5-27.5 77.3 28.6 2.2 55.9-13.3 74.5-38.3z"/></svg>
             join the TestFlight beta
+          </a>
+          <a href="https://github.com/4m4n5/tir/releases/download/v1.0.1-b3-android/build-android-v1.0.1-b3.apk" class="cta-button cta-button--secondary" aria-label="Download tir APK for Android">
+            <svg class="cta-icon" width="18" height="18" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M420.55 301.93a24 24 0 1 1 24-24 24 24 0 0 1-24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1-24 24m273.7-144.48 47.94-83a10 10 0 1 0-17.27-10l-48.54 84.07a306 306 0 0 0-123.28-25.56 306 306 0 0 0-123.28 25.56l-48.54-84.07a10 10 0 1 0-17.27 10l47.94 83C127.34 195.07 50.12 258.7 22.45 337.47h533.09c-27.67-78.77-104.89-142.4-176.39-180.02"/></svg>
+            APK for Android
           </a>
         </div>
 
@@ -91,59 +105,141 @@
         </ul>
       </section>
 
-      <section class="proof">
-        <div class="proof-copy">
-          <p class="eyebrow">how it works</p>
-          <h2>closest meaning, biggest leap.</h2>
-          <p>
-            a target word appears. four options. pick toward the target
-            &mdash; the closest meaning is the biggest leap. first to
-            reach the target wins the round.
-          </p>
-          <p>
-            same word, same time. everyone in the room is racing the same
-            target, on what words <em>mean</em>, not on spelling tricks.
-          </p>
-        </div>
-        <div class="proof-stage">
-          <div class="phone">
-            <img
-              src="images/screen-home.png"
-              alt="tir home screen with live round and leaderboard"
-              width="1320"
-              height="2868"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
+      <!-- HOW IT WORKS — 3-beat explainer -->
+      <section id="how" class="how">
+        <p class="eyebrow eyebrow-center">how to play</p>
+        <h2>three beats. one race.</h2>
+
+        <ol class="how-list" role="list">
+          <li class="how-step">
+            <span class="how-num" aria-hidden="true">1</span>
+            <div class="how-body">
+              <h3>a target word appears.</h3>
+              <p>everyone in the global room sees the same target, at the same time. you start from the same word, too.</p>
+            </div>
+          </li>
+          <li class="how-step">
+            <span class="how-num" aria-hidden="true">2</span>
+            <div class="how-body">
+              <h3>pick toward it.</h3>
+              <p>four options. the closest in meaning is the biggest leap. your current word jumps to your pick; four new options appear.</p>
+            </div>
+          </li>
+          <li class="how-step">
+            <span class="how-num" aria-hidden="true">3</span>
+            <div class="how-body">
+              <h3>first to reach wins.</h3>
+              <p>pure pairwise Elo, the same math chess uses. losing to someone far above barely costs you. beating someone far below barely earns you. honest.</p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="how-coda">
+          semantic, not lexical. you win on what words <em>mean</em>,
+          not on spelling tricks.
+        </p>
       </section>
 
-      <section class="manifesto">
+      <!-- SIX MOMENTS — feature rail, hum-pattern -->
+      <section id="moments" class="features">
+        <p class="eyebrow eyebrow-center">six moments</p>
+        <h2>the loop, end to end.</h2>
+
+        <div class="feature-rail" role="list">
+          <article class="feature" role="listitem">
+            <h3>pick a <span class="feature-accent">name</span>, pick a vibe.</h3>
+            <div class="phone">
+              <img src="images/screenshots/01-name.png" alt="name picker with auto-randomized handle and 30-emoji avatar grid" width="1206" height="2622" loading="lazy" decoding="async" />
+            </div>
+            <span class="feature-tag">no signup</span>
+          </article>
+
+          <article class="feature" role="listitem">
+            <h3>reach the <span class="feature-accent">target</span>.</h3>
+            <div class="phone">
+              <img src="images/screenshots/02-tutorial-win.png" alt="tutorial card 1 — cyan-haloed TARGET OCEAN demo card" width="1206" height="2622" loading="lazy" decoding="async" />
+            </div>
+            <span class="feature-tag">first to reach wins</span>
+          </article>
+
+          <article class="feature" role="listitem">
+            <h3>pick toward the <span class="feature-accent">target</span>.</h3>
+            <div class="phone">
+              <img src="images/screenshots/03-tutorial-move.png" alt="tutorial card 2 — current word RIVER, options STREAM VALLEY ROCK HORSE with STREAM selected" width="1206" height="2622" loading="lazy" decoding="async" />
+            </div>
+            <span class="feature-tag">closest meaning, biggest leap</span>
+          </article>
+
+          <article class="feature" role="listitem">
+            <h3>race <span class="feature-accent">together</span>.</h3>
+            <div class="phone">
+              <img src="images/screenshots/04-tutorial-sync.png" alt="tutorial card 3 — four player avatars, cyan-glowing self, LIVE 4 PLAYERS chip" width="1206" height="2622" loading="lazy" decoding="async" />
+            </div>
+            <span class="feature-tag">same word, same time</span>
+          </article>
+
+          <article class="feature" role="listitem">
+            <h3>one <span class="feature-accent">global</span> room, always on.</h3>
+            <div class="phone">
+              <img src="images/screenshots/05-home.png" alt="home screen — gold tier badge, rank #1, ELO 1340, 8-player leaderboard" width="1206" height="2622" loading="lazy" decoding="async" />
+            </div>
+            <span class="feature-tag">8-tier league ladder</span>
+          </article>
+
+          <article class="feature" role="listitem">
+            <h3>drop in. <span class="feature-accent">race</span>.</h3>
+            <div class="phone">
+              <img src="images/screenshots/06-game.png" alt="live game — TARGET risk, breadcrumb from compassion, four options, wolf 1340 gold" width="1206" height="2622" loading="lazy" decoding="async" />
+            </div>
+            <span class="feature-tag">round in progress</span>
+          </article>
+        </div>
+
+        <p class="rail-hint" aria-hidden="true">&rarr; swipe</p>
+      </section>
+
+      <!-- PROMISE -->
+      <section class="promise">
         <p class="eyebrow eyebrow-center">the promise</p>
-        <h2>quiet. fair. fast.</h2>
-        <ul class="manifesto-list" aria-label="what tir doesn't do">
+        <h2 class="promise-headline">
+          quiet. fair.<br />
+          <span class="promise-accent">fast.</span>
+        </h2>
+        <ul class="promise-list" aria-label="what tir doesn't do">
           <li>no ads.</li>
           <li>no in-app purchases.</li>
           <li>no power-ups.</li>
           <li>no signup.</li>
         </ul>
-        <p class="manifesto-coda">just race together.</p>
+        <p class="promise-coda">just race together.</p>
       </section>
 
+      <!-- FINAL CTA -->
       <section class="final-cta">
-        <h2>drop in.</h2>
-        <p>
-          live on TestFlight today. App Store soon.
-          <br />
-          <a href="mailto:support@aaam.dev?subject=tir%20testflight%20invite">email for an invite</a>.
+        <h2>drop <span class="hero-accent">in.</span></h2>
+        <p class="final-cta-sub">
+          live on TestFlight today. App Store soon. android APK below.
+        </p>
+        <div class="cta-group">
+          <a href="mailto:support@aaam.dev?subject=tir%20testflight%20invite" class="cta-button cta-button--bottom" aria-label="Request a TestFlight invite for tir">
+            <svg class="cta-icon" width="18" height="18" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184 4 276.8c0 27.3 4.9 55.6 14.7 84.9 13.1 39.1 60.3 134.9 109.4 133.2 25.7-.6 43.8-18.3 77.3-18.3 32.4 0 49.2 18.3 77.3 17.7 48.3-.8 90.8-83.8 103.6-123 .2-.7.4-1.3.6-2-61.8-26.1-64.2-92.8-64.2-100.6zM256 50.9c29-33.8 26.6-65 25.8-76.3-25.8 1.5-55.6 17.3-72.8 37.3-18.8 21.7-29.8 48.5-27.5 77.3 28.6 2.2 55.9-13.3 74.5-38.3z"/></svg>
+            join the TestFlight beta
+          </a>
+          <a href="https://github.com/4m4n5/tir/releases/download/v1.0.1-b3-android/build-android-v1.0.1-b3.apk" class="cta-button cta-button--secondary cta-button--bottom" aria-label="Download tir APK for Android">
+            <svg class="cta-icon" width="18" height="18" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M420.55 301.93a24 24 0 1 1 24-24 24 24 0 0 1-24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1-24 24m273.7-144.48 47.94-83a10 10 0 1 0-17.27-10l-48.54 84.07a306 306 0 0 0-123.28-25.56 306 306 0 0 0-123.28 25.56l-48.54-84.07a10 10 0 1 0-17.27 10l47.94 83C127.34 195.07 50.12 258.7 22.45 337.47h533.09c-27.67-78.77-104.89-142.4-176.39-180.02"/></svg>
+            download APK for Android
+          </a>
+        </div>
+        <p class="cta-microcopy">
+          shipped by <a href="/">aaam.dev</a>. quiet, fair, fast.
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p class="footer-brand">tir: word race</p>
+      <p class="footer-brand">tir &middot; word race</p>
       <nav aria-label="footer">
+        <a href="#how">how it works</a>
         <a href="support.html">support</a>
         <a href="privacy.html">privacy</a>
         <a href="mailto:support@aaam.dev">contact</a>
