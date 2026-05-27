@@ -411,6 +411,19 @@ h1 {
 .trust-row li:first-child { padding-left: 0; }
 .trust-row li:first-child::before { display: none; }
 
+/* PRODUCT HUNT BADGE ─────────────────────────────────────────────── */
+.ph-badge {
+  margin-top: clamp(1.6rem, 3vw, 2rem);
+  text-align: center;
+}
+.ph-badge img {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.ph-badge img:hover {
+  opacity: 1;
+}
+
 /* SECTIONS ───────────────────────────────────────────────────────── */
 section {
   padding: clamp(3rem, 6vw, 5rem) 0;
@@ -844,6 +857,7 @@ body.page-doc .meta {
   .hero-stage   { animation: rise 0.8s cubic-bezier(.2,.7,.2,1) 0.22s both; }
   .cta-group    { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.30s both; }
   .trust-row    { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.38s both; }
+  .ph-badge     { animation: rise 0.6s cubic-bezier(.2,.7,.2,1) 0.44s both; }
 }
 
 @keyframes rise {
