@@ -136,14 +136,17 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .brand-mark {
-  width: 22px;
-  height: 22px;
-  border-radius: 5px;
+  /* Transparent-canvas brand mark (icon-adaptive-foreground source).
+     The ring + dot + dual cyan halo are baked into the PNG, so it
+     sits flat on the page bg with no boundary square. We slightly
+     overscale (26px vs the original 22px iOS touch icon) to keep the
+     inner ring at the same optical weight, since the haloed canvas
+     reserves ~25% margin around the mark itself. No border-radius
+     (nothing to round) and no box-shadow (would stack a second glow
+     on top of the baked halo). */
+  width: 26px;
+  height: 26px;
   display: block;
-  object-fit: cover;
-  box-shadow:
-    0 0 0 1px rgba(0, 229, 255, 0.25),
-    0 0 18px rgba(0, 229, 255, 0.35);
 }
 
 .brand-name {
