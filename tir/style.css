@@ -413,8 +413,13 @@ h1 {
 
 /* PRODUCT HUNT BADGE ─────────────────────────────────────────────── */
 .ph-badge {
+  display: flex;
+  justify-content: center;
   margin-top: clamp(1.6rem, 3vw, 2rem);
-  text-align: center;
+}
+.ph-badge a {
+  display: inline-block;
+  line-height: 0;
 }
 .ph-badge img {
   opacity: 0.85;
