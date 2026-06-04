@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#0B0B12" />
     <meta name="color-scheme" content="dark" />
+    <!-- iOS Safari Smart App Banner — one-tap install prompt for visitors on iPhone -->
+    <meta name="apple-itunes-app" content="app-id=6768131124" />
     <title>tir &middot; race the room to the target word</title>
     <meta
       name="description"
@@ -41,6 +43,54 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png" />
     <link rel="preload" as="image" href="images/promo/01-hook.png" fetchpriority="high" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured data: tir as a game/mobile app + breadcrumb. Google requires
+         VideoGame to be co-typed with another type to be eligible for the app
+         rich result, so it is co-typed with MobileApplication. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["VideoGame", "MobileApplication"],
+          "@id": "https://aaam.dev/tir/#app",
+          "name": "tir",
+          "alternateName": "tir · word race",
+          "url": "https://aaam.dev/tir/",
+          "description": "tir is a fast-twitch live word race. A target word appears; pick toward it by meaning — closest meaning, biggest leap. First to reach the target wins. One global room, real opponents, pure pairwise Elo. No ads, no in-app purchases, no signup.",
+          "applicationCategory": "GameApplication",
+          "genre": "Word Game",
+          "operatingSystem": "iOS, Android",
+          "gamePlatform": ["iOS", "Android"],
+          "playMode": "MultiPlayer",
+          "image": "https://aaam.dev/tir/images/og-cover.png",
+          "screenshot": [
+            "https://aaam.dev/tir/images/promo/01-hook.png",
+            "https://aaam.dev/tir/images/promo/02-pick.png",
+            "https://aaam.dev/tir/images/promo/04-game.png"
+          ],
+          "downloadUrl": "https://apps.apple.com/us/app/tir-word-race/id6768131124",
+          "installUrl": "https://apps.apple.com/us/app/tir-word-race/id6768131124",
+          "publisher": { "@id": "https://aaam.dev/#org" },
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://aaam.dev/#org",
+          "name": "aaam.dev",
+          "url": "https://aaam.dev/",
+          "email": "support@aaam.dev"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "aaam.dev", "item": "https://aaam.dev/" },
+            { "@type": "ListItem", "position": 2, "name": "tir", "item": "https://aaam.dev/tir/" }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
@@ -76,7 +126,7 @@
           <img
             class="promo-hero"
             src="images/promo/01-hook.png"
-            alt="tir promotional — race the room to the target word. LIVE round 129, wolf #1, 8-tier leaderboard"
+            alt="tir app home screen — race the room to the target word, with a live round in progress and an 8-tier Elo leaderboard"
             width="1320"
             height="2868"
             loading="eager"
@@ -150,7 +200,7 @@
 
         <div class="promo-rail" role="list">
           <article class="promo-card" role="listitem">
-            <img src="images/promo/01-hook.png" alt="race the room to the target word — home screen with wolf #1, LIVE round, 8-tier leaderboard" width="1320" height="2868" loading="lazy" decoding="async" />
+            <img src="images/promo/01-hook.png" alt="race the room to the target word — tir home screen with a live round and an 8-tier leaderboard" width="1320" height="2868" loading="lazy" decoding="async" />
           </article>
 
           <article class="promo-card" role="listitem">

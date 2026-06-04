@@ -62,6 +62,9 @@ flag the redirect chain).
 ```
 aaam.dev/
 ├── index.html              ← studio landing page
+├── robots.txt              ← allows all crawlers (incl. AI bots) + sitemap ref
+├── sitemap.xml             ← all 7 pages, for Search Console / Bing
+├── llms.txt                ← plain-text site summary for AI answer engines
 ├── hum/                    ← Hum - rituals store pages (dir is `hum/`; brand is "hum")
 │   ├── index.html          ← marketing / product overview
 │   ├── support.html        ← support + FAQ + account deletion
@@ -70,6 +73,37 @@ aaam.dev/
 │   └── images/             ← screenshots, og-cover
 └── <future-app>/           ← next app goes here
 ```
+
+---
+
+## SEO / discoverability
+
+Every page is statically optimized — no build step needed.
+
+- **JSON-LD structured data** (`<script type="application/ld+json">` in each
+  `<head>`): the landing page carries `Organization` + `WebSite` + an
+  `ItemList` of both apps; each app page carries a `MobileApplication`
+  (`tir` is co-typed `VideoGame` + `MobileApplication` so it qualifies for
+  Google's app rich result); support pages carry `FAQPage`; sub-pages carry
+  `BreadcrumbList`. Entities link via `@id` to `https://aaam.dev/#org`.
+- **`robots.txt` / `sitemap.xml` / `llms.txt`** live at the repo root.
+- **iOS Smart App Banner** (`<meta name="apple-itunes-app">`) on each app page.
+- **No fake `aggregateRating`.** Add real star ratings to the
+  `MobileApplication` schema *only* once the apps have genuine App Store
+  reviews — fabricated ratings violate Google's guidelines and can earn a
+  manual penalty.
+
+**Manual follow-ups (off-page, can't be done in this repo):**
+
+1. Submit `https://aaam.dev/sitemap.xml` in
+   [Google Search Console](https://search.google.com/search-console) and
+   [Bing Webmaster Tools](https://www.bing.com/webmasters).
+2. Validate the structured data with the
+   [Rich Results Test](https://search.google.com/test/rich-results) and the
+   [Schema.org Validator](https://validator.schema.org/) after each deploy.
+3. Earn real editorial backlinks (the legitimate version of what paid
+   "press" vendors sell). Once the apps have App Store ratings, add an
+   `aggregateRating` to each app's JSON-LD for star rich results.
 
 ---
 

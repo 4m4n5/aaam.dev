@@ -6,11 +6,86 @@
     <meta name="theme-color" content="#0B0B12" />
     <meta name="color-scheme" content="dark" />
     <title>support &middot; tir</title>
-    <meta name="description" content="support and FAQ for tir, a fast-paced word race." />
+    <meta name="description" content="Support and FAQ for tir, the live semantic word race. How to play, the global room, Elo ranking, private rooms, data, and account deletion." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="tir &middot; word race" />
+    <meta property="og:title" content="support &middot; tir" />
+    <meta property="og:description" content="How to play, the global room, Elo ranking, private rooms, data, and account deletion." />
+    <meta property="og:url" content="https://aaam.dev/tir/support.html" />
+    <meta property="og:image" content="https://aaam.dev/tir/images/og-cover.png" />
+
+    <link rel="canonical" href="https://aaam.dev/tir/support.html" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="1024x1024" href="images/icon-1024.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- FAQPage structured data — mirrors the visible FAQ below. Eligible for
+         FAQ rich results and heavily used by AI answer engines for grounding. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I play tir?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A target word appears. You see four options. Pick toward the target — closest meaning, biggest leap. Your current word jumps to that pick and four new options appear. Keep picking. The first to reach the target wins the round." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does \"closest meaning\" mean?",
+          "acceptedAnswer": { "@type": "Answer", "text": "tir uses semantic similarity (vector embeddings). Two words are close if their meanings overlap, regardless of spelling. cat and tiger are close; cat and cathedral are not. A closer pick is a bigger leap toward the target." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the global room?",
+          "acceptedAnswer": { "@type": "Answer", "text": "One always-on room that everyone plays in — same word, same time, real opponents. Drop in any time, win Elo, and leave when you want. A round runs as fast as the fastest player picks; when the winner reaches the target a short finish window lets the rest finish, then the next round starts." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if no one else is online?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You can still play and still earn rating. Solo wins use diminishing returns per day (+8 / +4 / +2 / +1 / +1…) so off-peak play keeps the climb alive without becoming a farm. Real opponents are always worth more." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a private room?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A room you create with a 4-character join code. Share the code with friends to race head-to-head. Private rooms have four difficulty levels (chill, normal, hard, expert) and do not change your global Elo — perfect for practice or casual games." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the placement period?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your first 5 rounds are a calibration period. Your real Elo rating is computed in the background, but the app shows \"Calibrating N/5\" to keep early volatility quiet. After round 5 your tier badge and numeric rating appear." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Elo work in tir?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pure pairwise Elo — the same math chess uses. You gain rating by beating opponents rated near or above you. Losing to someone much stronger barely costs you; beating someone much weaker barely earns you anything." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I sign in on a new device?",
+          "acceptedAnswer": { "@type": "Answer", "text": "tir uses anonymous accounts tied to your installation. There is no sign-in flow today. Account portability (link to Apple or Google) is on the roadmap." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is my data stored?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On Google Firebase (Authentication, Firestore, and Cloud Functions). See the privacy policy for details." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there ads or in-app purchases?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. tir is free, with no ads and no in-app purchases." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I delete my account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Open tir, scroll to the bottom of the home screen, tap the red \"delete account\" button, and confirm. This permanently removes your authentication record, profile, public leaderboard entry, and room memberships. If you cannot access the app, email support@aaam.dev and we will process the deletion within 7 days." }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="page-doc">
     <header class="topbar">

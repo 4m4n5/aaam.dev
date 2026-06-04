@@ -27,6 +27,73 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/hum/images/favicon-32.png" />
     <link rel="apple-touch-icon" href="/hum/images/icon-180.png" />
 
+    <!-- Structured data: studio Organization + WebSite + the two apps as an
+         ItemList. Entities are linked by @id so search + AI engines resolve
+         "aaam.dev makes hum and tir" as one knowledge graph. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://aaam.dev/#org",
+          "name": "aaam.dev",
+          "url": "https://aaam.dev/",
+          "email": "support@aaam.dev",
+          "description": "A small independent studio making quiet, private, ad-free apps.",
+          "foundingDate": "2026-05",
+          "logo": "https://aaam.dev/hum/images/icon-1024.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://aaam.dev/#website",
+          "url": "https://aaam.dev/",
+          "name": "aaam.dev",
+          "description": "Two apps, one studio. hum, a calm space for couples. tir, a word race for the room.",
+          "publisher": { "@id": "https://aaam.dev/#org" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://aaam.dev/#apps",
+          "name": "Apps by aaam.dev",
+          "itemListOrder": "https://schema.org/ItemListUnordered",
+          "numberOfItems": 2,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": ["VideoGame", "MobileApplication"],
+                "name": "tir",
+                "alternateName": "tir · word race",
+                "url": "https://aaam.dev/tir/",
+                "applicationCategory": "GameApplication",
+                "operatingSystem": "iOS, Android",
+                "publisher": { "@id": "https://aaam.dev/#org" },
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "MobileApplication",
+                "name": "hum",
+                "alternateName": "hum · for two",
+                "url": "https://aaam.dev/hum/",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "iOS, Android",
+                "publisher": { "@id": "https://aaam.dev/#org" },
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <style>
       :root {
         --bg: #0b0b12;

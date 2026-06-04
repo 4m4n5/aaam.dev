@@ -6,11 +6,86 @@
     <meta name="theme-color" content="#0F0E14" />
     <meta name="color-scheme" content="dark" />
     <title>support &middot; hum</title>
-    <meta name="description" content="support and FAQ for hum" />
+    <meta name="description" content="Support and FAQ for hum, a private home for couples. Linking partners, mood, habits, streaks, decide, awards, reasons, data, and account deletion." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="hum &middot; for two" />
+    <meta property="og:title" content="support &middot; hum" />
+    <meta property="og:description" content="Linking partners, mood, habits, streaks, decide, awards, reasons, data, and account deletion." />
+    <meta property="og:url" content="https://aaam.dev/hum/support.html" />
+    <meta property="og:image" content="https://aaam.dev/hum/images/og-cover.png" />
+
+    <link rel="canonical" href="https://aaam.dev/hum/support.html" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="1024x1024" href="images/icon-1024.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- FAQPage structured data — mirrors the visible FAQ below. Eligible for
+         FAQ rich results and used by AI answer engines for grounding. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I link with my partner?",
+          "acceptedAnswer": { "@type": "Answer", "text": "One of you creates an account and finds the invite code in the app. The other signs up (or signs in) and enters that code on the link screen. After linking, you share the same couple space." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does mood check-in work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tap the mood tab, choose an emoji that fits your current vibe, and save. You can check in multiple times a day — your partner sees your latest mood in real time and vice versa. When you both log the same mood, you'll see an \"in sync\" moment." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do habits work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Create daily or weekly habits from the habits tab. Shared habits track both partners' completion; personal habits are just for you. A six-week heatmap shows shared-habit progress, and completing all shared habits for the day triggers a celebration." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are streaks?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A joint streak counts consecutive days where both partners completed all shared daily habits. Your current streak shows as a fire badge in the habits action bar." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Decide work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Decide is a calm utility for landing on a choice together. You both add ideas to a shared pool by category, then either vote together (comparing pairs round by round until one remains) or tap \"pick for us\" to surface one option from the pool you curated. No chance, no wagers, no points — just an easier way to make small decisions." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do Awards work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Awards is a private, twice-a-year ritual for the two of you. You both nominate little stories or inside jokes across categories. When the season closes you each privately pick a winner per category, the app surfaces overlaps, and you cheer the winners together. Past seasons stay in your private vault — no public leaderboards." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Reasons work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Reasons is a quiet space for gratitude. You write a short line about why you love your partner. When the moment's right, you can reveal up to three random lines they've written about you. Reasons stay private between the two of you." }
+        },
+        {
+          "@type": "Question",
+          "name": "I forgot my password.",
+          "acceptedAnswer": { "@type": "Answer", "text": "Use the password reset flow from the sign-in screen (Firebase Auth). If the email does not arrive, check spam and confirm you typed the correct email." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I delete my account and data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open the app, tap the \"you\" tab, scroll to the bottom, tap the red \"delete account\" button, enter your password, and confirm. This removes your sign-in, profile, and all shared couple data (mood, habits, check-in history, decisions, awards, reasons). Your partner is automatically unlinked. You can also email support@aaam.dev to request deletion." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a public feed or social graph?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The app is for two linked people only; there is no discovery or public timeline." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is my data stored?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On Google Firebase (Authentication, Firestore, and Cloud Functions). See the privacy policy for details." }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="page-doc">
     <header class="topbar">

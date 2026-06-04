@@ -1,0 +1,21 @@
+# aaam.dev
+
+> A small independent app studio making quiet, private, ad-free apps. Two apps are live, both free with no ads, no in-app purchases, and no tracking: **hum** (a private home for couples) and **tir** (a live semantic word race).
+
+aaam.dev was established May 2026. Both apps are available free on the Apple App Store and as Android builds. The studio's whole premise is software that respects users: no ads, no in-app purchases, no subscriptions, no signup walls, no tracking.
+
+## Apps
+
+- [tir — word race](https://aaam.dev/tir/): A fast-twitch live word game. A target word appears; players race to reach it by picking the option closest in meaning (semantic, not spelling). First to the target wins. One always-on global room with real opponents and pure pairwise Elo ranking (the same math chess uses). Free on iOS and Android. No ads, no in-app purchases, no signup. App Store: https://apps.apple.com/us/app/tir-word-race/id6768131124
+- [hum — for two](https://aaam.dev/hum/): A calm, invite-only home for couples. Log mood, track shared habits, decide together, give awards, and trade reasons you love each other. Private to two linked people — no feed, no ads, no subscriptions, no tracking. Free on iOS and Android. App Store: https://apps.apple.com/us/app/hum-for-two/id6768805132
+
+## Support
+
+- [tir support & FAQ](https://aaam.dev/tir/support.html): How to play, the global room, Elo, private rooms, placement, data, account deletion.
+- [tir privacy policy](https://aaam.dev/tir/privacy.html)
+- [hum support & FAQ](https://aaam.dev/hum/support.html): Linking partners, mood, habits, streaks, decide, awards, reasons, data, account deletion.
+- [hum privacy policy](https://aaam.dev/hum/privacy.html)
+
+## Contact
+
+- Email: support@aaam.dev
