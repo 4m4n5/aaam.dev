@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B0B12" />
+    <meta name="color-scheme" content="dark" />
+    <title>mango &middot; reclaim your TV</title>
+    <meta
+      name="description"
+      content="mango is a household-owned TV experience for Raspberry Pi 5. browse movies, shows, youtube, and optional live television; search across them; choose a stream; and keep library state local."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="mango &middot; by aaam.dev" />
+    <meta property="og:title" content="mango · reclaim your TV" />
+    <meta
+      property="og:description"
+      content="one household-owned surface for movies, shows, youtube, optional live television, local taste, and a phone librarian."
+    />
+    <meta property="og:url" content="https://aaam.dev/mango/" />
+    <meta property="og:image" content="https://aaam.dev/mango/images/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="mango TV interface on a dark amber canvas with the words reclaim your TV" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="mango · reclaim your TV" />
+    <meta
+      name="twitter:description"
+      content="a household-owned TV experience running on Raspberry Pi 5."
+    />
+    <meta name="twitter:image" content="https://aaam.dev/mango/images/og-cover.png" />
+
+    <link rel="canonical" href="https://aaam.dev/mango/" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/tv-home-960.webp"
+      imagesrcset="images/tv-home-960.webp 960w, images/tv-home-1920.webp 1920w"
+      imagesizes="(max-width: 1240px) calc(100vw - 2rem), 1080px"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://aaam.dev/mango/#software",
+          "name": "mango",
+          "alternateName": "mango · TV on your terms",
+          "url": "https://aaam.dev/mango/",
+          "description": "A household-owned, couch-first TV experience for Raspberry Pi 5 with unified browse and search, native mpv playback, local library state, household recommendations, and an optional phone librarian.",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Raspberry Pi OS",
+          "softwareRequirements": "Raspberry Pi 5, Raspberry Pi OS Desktop, X11, Openbox, Chromium, mpv",
+          "image": "https://aaam.dev/mango/images/og-cover.png",
+          "screenshot": [
+            "https://aaam.dev/mango/images/story/01-product.webp",
+            "https://aaam.dev/mango/images/story/03-search.webp",
+            "https://aaam.dev/mango/images/story/06-librarian.webp"
+          ],
+          "codeRepository": "https://github.com/4m4n5/mango",
+          "downloadUrl": "https://github.com/4m4n5/mango",
+          "license": "https://www.apache.org/licenses/LICENSE-2.0",
+          "publisher": { "@id": "https://aaam.dev/#org" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://aaam.dev/#org",
+          "name": "aaam.dev",
+          "url": "https://aaam.dev/",
+          "email": "support@aaam.dev"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "aaam.dev", "item": "https://aaam.dev/" },
+            { "@type": "ListItem", "position": 2, "name": "mango", "item": "https://aaam.dev/mango/" }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div class="halo" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a href="#top" class="brand" aria-label="mango home">mango<span aria-hidden="true">.</span></a>
+      <nav class="topnav" aria-label="primary">
+        <a href="#experience">experience</a>
+        <a href="#principles">principles</a>
+        <a href="https://github.com/4m4n5/mango">source</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">mango &middot; for the living room</p>
+        <h1>reclaim your <span class="hero-accent">TV.</span></h1>
+        <p class="hero-sub">
+          a household-owned TV experience for Raspberry Pi 5. movies, shows,
+          youtube, and optional live television in one place.
+        </p>
+
+        <div class="hero-stage">
+          <img
+            src="images/tv-home-960.webp"
+            srcset="images/tv-home-960.webp 960w, images/tv-home-1920.webp 1920w"
+            sizes="(max-width: 1240px) calc(100vw - 2rem), 1080px"
+            alt="mango Movies Home showing populated Saved and For You rails"
+            width="1920"
+            height="1080"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+
+        <div class="cta-group">
+          <a href="mailto:support@aaam.dev?subject=mango" class="cta-button">get in touch</a>
+          <a href="https://github.com/4m4n5/mango" class="cta-button cta-button--secondary">view the source</a>
+        </div>
+
+        <ul class="trust-row" aria-label="what mango is">
+          <li>self-hosted alpha</li>
+          <li>raspberry pi 5</li>
+          <li>local library state</li>
+          <li>controller-first</li>
+        </ul>
+      </section>
+
+      <section id="experience" class="experience">
+        <p class="eyebrow eyebrow-center">inside mango</p>
+        <h2>one surface. eight real views.</h2>
+        <p class="section-intro">
+          every frame comes from the current Raspberry Pi interface or phone
+          companion. no invented product UI.
+        </p>
+
+        <div class="story-rail" role="list" aria-label="mango product story">
+          <figure class="story-card" role="listitem">
+            <img src="images/story/01-product.webp" alt="reclaim your TV — mango Movies Home with Saved and For You" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="story-card" role="listitem">
+            <img src="images/story/02-breadth.webp" alt="it is all here — mango TV Shows rails with Indian and international series" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="story-card" role="listitem">
+            <img src="images/story/03-search.webp" alt="find anything — four mango Search views for movies, shows, live, and youtube" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="story-card" role="listitem">
+            <img src="images/story/04-streams.webp" alt="watch it at its best — a real RRR detail page with available streams" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="story-card" role="listitem">
+            <img src="images/story/05-taste.webp" alt="rate with fire and water — Project Hail Mary detail with saved ratings" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="story-card" role="listitem">
+            <img src="images/story/06-librarian.webp" alt="your content librarian — two phone screens refine a request and open Andhadhun on the TV" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="story-card" role="listitem">
+            <img src="images/story/07-youtube.webp" alt="youtube built in — mango youtube recommendations from subscriptions and history" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="story-card" role="listitem">
+            <img src="images/story/08-contact.webp" alt="want to know how mango was built — mango TV Shows Home and contact invitation" width="720" height="960" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+        <p class="rail-hint" aria-hidden="true">&rarr; swipe through mango</p>
+      </section>
+
+      <section class="features">
+        <p class="eyebrow eyebrow-center">what stays together</p>
+        <h2>the whole viewing loop.</h2>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-num" aria-hidden="true">01</span>
+            <h3>browse and search.</h3>
+            <p>movies, TV shows, youtube, and optional live results share one controller-first launcher.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-num" aria-hidden="true">02</span>
+            <h3>inspect before play.</h3>
+            <p>open Detail, compare available quality, audio, language, and size, then press B to watch in mpv.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-num" aria-hidden="true">03</span>
+            <h3>teach your taste.</h3>
+            <p>Fire and Water ratings shape cached household recommendations. progress, Saved, and history stay local.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-num" aria-hidden="true">04</span>
+            <h3>ask from your phone.</h3>
+            <p>the optional librarian can clarify, curate, save, and open a title on the TV. the controller still starts playback.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="principles" class="principles">
+        <p class="eyebrow eyebrow-center">the boundary</p>
+        <h2>real now. unfinished where it matters.</h2>
+
+        <div class="principle-grid">
+          <article>
+            <h3>real today</h3>
+            <p>the launcher, unified Search, local library, household rails, phone librarian, and native mpv path are working product surfaces.</p>
+          </article>
+          <article>
+            <h3>you bring</h3>
+            <p>the Raspberry Pi, controller, accounts, addon manifests, credentials, and rights to the media you access.</p>
+          </article>
+          <article>
+            <h3>still open</h3>
+            <p>no-SSH first boot, intentional display sleep, native HDR, and final whole-product couch sign-off.</p>
+          </article>
+        </div>
+
+        <p class="boundary-note">
+          mango is an alpha self-hosted project, not a finished retail appliance.
+          mango inserts no advertising into its own interface; third-party
+          services remain their own. mango is not affiliated with youtube,
+          Stremio, debrid services, IPTV providers, studios, or broadcasters.
+        </p>
+      </section>
+
+      <section class="final-cta">
+        <p class="eyebrow eyebrow-center">mango &middot; by aaam.dev</p>
+        <h2>want mango in your <span class="hero-accent">living room?</span></h2>
+        <p>get in touch for more information, or follow the source as the appliance takes shape.</p>
+        <div class="cta-group">
+          <a href="mailto:support@aaam.dev?subject=mango" class="cta-button">get in touch</a>
+          <a href="https://github.com/4m4n5/mango" class="cta-button cta-button--secondary">github</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">mango<span aria-hidden="true">.</span></p>
+      <nav aria-label="footer">
+        <a href="https://github.com/4m4n5/mango">source</a>
+        <a href="https://github.com/4m4n5/mango/tree/feat/native-experience/docs">docs</a>
+        <a href="mailto:support@aaam.dev">contact</a>
+      </nav>
+      <p class="footer-meta"><a href="/">aaam.dev</a> &middot; august 2026</p>
+    </footer>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 # aaam.dev — studio website
 
 Public-facing website for **aaam.dev**, hosted on **Cloudflare Pages**.
-Each app gets its own subdirectory (e.g. `/hum/`).
+Each project gets its own subdirectory (e.g. `/hum/`, `/mango/`).
 
 ---
 
@@ -16,6 +16,7 @@ Each app gets its own subdirectory (e.g. `/hum/`).
 | `https://aaam.dev/tir/` | tir - word race marketing page |
 | `https://aaam.dev/tir/support.html` | tir support + FAQ |
 | `https://aaam.dev/tir/privacy.html` | tir privacy policy |
+| `https://aaam.dev/mango/` | mango - Raspberry Pi TV experience |
 
 Legacy `/humm/*` URLs 301-redirect to `/hum/*` via `_redirects`. Update
 App Store Connect / Play Console for the **hum** app to use the new
@@ -65,6 +66,10 @@ aaam.dev/
 ├── robots.txt              ← allows all crawlers (incl. AI bots) + sitemap ref
 ├── sitemap.xml             ← all 7 pages, for Search Console / Bing
 ├── llms.txt                ← plain-text site summary for AI answer engines
+├── mango/                  ← mango TV product page
+│   ├── index.html          ← marketing / product overview
+│   ├── style.css           ← cinema-dark amber design
+│   └── images/             ← real Pi capture, launch story, OG cover
 ├── hum/                    ← Hum - rituals store pages (dir is `hum/`; brand is "hum")
 │   ├── index.html          ← marketing / product overview
 │   ├── support.html        ← support + FAQ + account deletion
@@ -82,10 +87,11 @@ Every page is statically optimized — no build step needed.
 
 - **JSON-LD structured data** (`<script type="application/ld+json">` in each
   `<head>`): the landing page carries `Organization` + `WebSite` + an
-  `ItemList` of both apps; each app page carries a `MobileApplication`
+  `ItemList` of all three projects; each app page carries a `MobileApplication`
   (`tir` is co-typed `VideoGame` + `MobileApplication` so it qualifies for
-  Google's app rich result); support pages carry `FAQPage`; sub-pages carry
-  `BreadcrumbList`. Entities link via `@id` to `https://aaam.dev/#org`.
+  Google's app rich result), while mango carries `SoftwareApplication`;
+  support pages carry `FAQPage`; sub-pages carry `BreadcrumbList`. Entities
+  link via `@id` to `https://aaam.dev/#org`.
 - **`robots.txt` / `sitemap.xml` / `llms.txt`** live at the repo root.
 - **iOS Smart App Banner** (`<meta name="apple-itunes-app">`) on each app page.
 - **No fake `aggregateRating`.** Add real star ratings to the
@@ -107,13 +113,14 @@ Every page is statically optimized — no build step needed.
 
 ---
 
-## How to add a new app
+## How to add a new project
 
-1. Create a new directory at the root: `mkdir <app-name>`
-2. Add `index.html`, `support.html`, `privacy.html`, `style.css`
-3. Add a card to the root `index.html` linking to `/<app-name>/`
+1. Create a new directory at the root: `mkdir <project-name>`
+2. Add `index.html`, `style.css`, images, and support/privacy pages when the
+   product needs them
+3. Add a card to the root `index.html` linking to `/<project-name>/`
 4. Push to `main` — Cloudflare Pages auto-deploys
-5. Update App Store Connect / Play Console URLs to `https://aaam.dev/<app-name>/...`
+5. Update the sitemap, `llms.txt`, and any relevant store-console URLs
 
 ---
 

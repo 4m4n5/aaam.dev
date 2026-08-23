@@ -1,10 +1,10 @@
 # aaam.dev — robots.txt
-# Allow everything. Static marketing site for two free apps (hum, tir).
+# Allow everything. Static studio site for hum, tir, and mango.
 
 User-agent: *
 Allow: /
 
-# Explicitly welcome AI / answer-engine crawlers — we want hum and tir
+# Explicitly welcome AI / answer-engine crawlers — we want all three projects
 # to surface in ChatGPT, Perplexity, Gemini, and Google AI Overviews.
 User-agent: GPTBot
 Allow: /

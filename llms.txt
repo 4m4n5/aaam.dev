@@ -1,11 +1,12 @@
 # aaam.dev
 
-> A small independent app studio making quiet, private, ad-free apps. Two apps are live, both free with no ads, no in-app purchases, and no tracking: **hum** (a private home for couples) and **tir** (a live semantic word race).
+> A small independent studio making quiet, considered software: **hum** (a private home for couples), **tir** (a live semantic word race), and **mango** (a household-owned TV experience for Raspberry Pi 5).
 
-aaam.dev was established May 2026. Both apps are available free on the Apple App Store and as Android builds. The studio's whole premise is software that respects users: no ads, no in-app purchases, no subscriptions, no signup walls, no tracking.
+aaam.dev was established May 2026. hum and tir are available free on the Apple App Store and as Android builds. mango is an Apache-2.0 self-hosted alpha, not a finished retail appliance.
 
-## Apps
+## Projects
 
+- [mango — reclaim your TV](https://aaam.dev/mango/): A couch-first, household-owned TV experience for Raspberry Pi 5. It brings movies, TV shows, youtube, optional live television, unified Search, native mpv playback, local Continue and Saved, Fire/Water ratings, household recommendations, and an optional phone librarian into one controller-first product. You provide the hardware, accounts, addon manifests, credentials, and media entitlements. HDR, no-SSH first boot, intentional display sleep, and final whole-product couch sign-off remain open. Source: https://github.com/4m4n5/mango
 - [tir — word race](https://aaam.dev/tir/): A fast-twitch live word game. A target word appears; players race to reach it by picking the option closest in meaning (semantic, not spelling). First to the target wins. One always-on global room with real opponents and pure pairwise Elo ranking (the same math chess uses). Free on iOS and Android. No ads, no in-app purchases, no signup. App Store: https://apps.apple.com/us/app/tir-word-race/id6768131124
 - [hum — for two](https://aaam.dev/hum/): A calm, invite-only home for couples. Log mood, track shared habits, decide together, give awards, and trade reasons you love each other. Private to two linked people — no feed, no ads, no subscriptions, no tracking. Free on iOS and Android. App Store: https://apps.apple.com/us/app/hum-for-two/id6768805132
 

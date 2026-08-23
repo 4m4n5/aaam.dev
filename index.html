@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#0B0B12" />
     <meta name="color-scheme" content="dark" />
-    <title>aaam.dev — small, private apps</title>
-    <meta name="description" content="aaam.dev is a small studio making two apps: hum, a calm space for couples, and tir, a word race for the room." />
+    <title>aaam.dev — small, considered software</title>
+    <meta name="description" content="aaam.dev is a small studio making hum, a calm space for couples; tir, a word race for the room; and mango, a household-owned TV experience." />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="aaam.dev" />
-    <meta property="og:title" content="aaam.dev — small, private apps" />
-    <meta property="og:description" content="two apps. one studio. hum, for two. tir, for the room." />
+    <meta property="og:title" content="aaam.dev — small, considered software" />
+    <meta property="og:description" content="three projects. one studio. hum, tir, and mango." />
     <meta property="og:url" content="https://aaam.dev/" />
     <meta property="og:image" content="https://aaam.dev/hum/images/og-cover.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="aaam.dev — small, private apps" />
-    <meta name="twitter:description" content="two apps. one studio." />
+    <meta name="twitter:title" content="aaam.dev — small, considered software" />
+    <meta name="twitter:description" content="three projects. one studio." />
     <meta name="twitter:image" content="https://aaam.dev/hum/images/og-cover.png" />
 
     <link rel="canonical" href="https://aaam.dev/" />
     <link rel="icon" type="image/png" sizes="32x32" href="/hum/images/favicon-32.png" />
     <link rel="apple-touch-icon" href="/hum/images/icon-180.png" />
 
-    <!-- Structured data: studio Organization + WebSite + the two apps as an
+    <!-- Structured data: studio Organization + WebSite + the three projects as an
          ItemList. Entities are linked by @id so search + AI engines resolve
-         "aaam.dev makes hum and tir" as one knowledge graph. -->
+         "aaam.dev makes hum, tir, and mango" as one knowledge graph. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,7 +40,7 @@
           "name": "aaam.dev",
           "url": "https://aaam.dev/",
           "email": "support@aaam.dev",
-          "description": "A small independent studio making quiet, private, ad-free apps.",
+          "description": "A small independent studio making quiet, considered software.",
           "foundingDate": "2026-05",
           "logo": "https://aaam.dev/hum/images/icon-1024.png"
         },
@@ -49,16 +49,16 @@
           "@id": "https://aaam.dev/#website",
           "url": "https://aaam.dev/",
           "name": "aaam.dev",
-          "description": "Two apps, one studio. hum, a calm space for couples. tir, a word race for the room.",
+          "description": "Three projects, one studio. hum, a calm space for couples. tir, a word race for the room. mango, a household-owned TV experience.",
           "publisher": { "@id": "https://aaam.dev/#org" },
           "inLanguage": "en"
         },
         {
           "@type": "ItemList",
           "@id": "https://aaam.dev/#apps",
-          "name": "Apps by aaam.dev",
+          "name": "Projects by aaam.dev",
           "itemListOrder": "https://schema.org/ItemListUnordered",
-          "numberOfItems": 2,
+          "numberOfItems": 3,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -87,6 +87,19 @@
                 "publisher": { "@id": "https://aaam.dev/#org" },
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
               }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "mango",
+                "alternateName": "mango · TV on your terms",
+                "url": "https://aaam.dev/mango/",
+                "applicationCategory": "MultimediaApplication",
+                "operatingSystem": "Raspberry Pi OS",
+                "publisher": { "@id": "https://aaam.dev/#org" }
+              }
             }
           ]
         }
@@ -110,6 +123,7 @@
         --hum: #ff8e9b;
         --hum-warm: #ffb392;
         --tir: #00e5ff;
+        --mango: #e8a020;
 
         --radius-sm: 12px;
         --radius-md: 18px;
@@ -142,8 +156,8 @@
         text-rendering: optimizeLegibility;
       }
 
-      /* Ambient two-color halo: warm pink (hum) upper-left, cyan (tir) upper-right.
-         Static gradient — no animation. Telegraphs "this studio makes both these apps." */
+      /* One restrained halo per project. Static: the shared canvas creates the
+         family; hue gives each project its own identity. */
       .halo {
         position: fixed;
         inset: -20% -20% auto -20%;
@@ -151,8 +165,9 @@
         pointer-events: none;
         z-index: 0;
         background:
-          radial-gradient(45% 55% at 25% 0%, rgba(255, 142, 155, 0.22) 0%, transparent 65%),
-          radial-gradient(45% 55% at 75% 0%, rgba(0, 229, 255, 0.16)  0%, transparent 65%);
+          radial-gradient(38% 55% at 16% 0%, rgba(255, 142, 155, 0.20) 0%, transparent 65%),
+          radial-gradient(34% 52% at 50% 0%, rgba(232, 160, 32, 0.14) 0%, transparent 68%),
+          radial-gradient(38% 55% at 84% 0%, rgba(0, 229, 255, 0.15) 0%, transparent 65%);
         filter: blur(18px);
       }
 
@@ -263,6 +278,7 @@
 
       .app-card--hum { --accent: var(--hum); --accent-glow: rgba(255, 142, 155, 0.10); }
       .app-card--tir { --accent: var(--tir); --accent-glow: rgba(0, 229, 255, 0.08); }
+      .app-card--mango { --accent: var(--mango); --accent-glow: rgba(232, 160, 32, 0.09); }
 
       .app-icon {
         width: 48px;
@@ -273,6 +289,24 @@
         object-fit: cover;
         box-shadow:
           0 0 0 1px rgba(255, 255, 255, 0.04),
+          0 6px 18px rgba(0, 0, 0, 0.35);
+      }
+
+      .app-wordmark {
+        width: 48px;
+        height: 48px;
+        border: 1px solid rgba(232, 160, 32, 0.24);
+        border-radius: 12px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        background: #101014;
+        color: var(--mango);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        box-shadow:
+          0 0 24px rgba(232, 160, 32, 0.09),
           0 6px 18px rgba(0, 0, 0, 0.35);
       }
 
@@ -391,7 +425,8 @@
         .tagline        { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.08s both; }
         .app-card:nth-child(1) { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.18s both; }
         .app-card:nth-child(2) { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.26s both; }
-        .meta-line     { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.40s both; }
+        .app-card:nth-child(3) { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.34s both; }
+        .meta-line     { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) 0.46s both; }
       }
 
       @keyframes rise {
@@ -413,6 +448,11 @@
           width: 44px;
           height: 44px;
         }
+        .app-wordmark {
+          width: 44px;
+          height: 44px;
+          font-size: 0.66rem;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -429,9 +469,9 @@
 
     <main>
       <h1 class="brand-wordmark">aaam<span class="dot">.</span>dev</h1>
-      <p class="tagline">a small studio. <em>two apps.</em> one for two, one for the room.</p>
+      <p class="tagline">a small studio. <em>three projects.</em> each built to feel like itself.</p>
 
-      <nav class="apps" aria-label="our apps">
+      <nav class="apps" aria-label="our projects">
         <a href="/hum/" class="app-card app-card--hum">
           <img class="app-icon" src="/hum/images/icon-1024.png" alt="" width="48" height="48" loading="eager" decoding="async" />
           <div class="app-info">
@@ -447,6 +487,15 @@
             <div class="app-name">tir <span class="accent">· word race</span></div>
             <div class="app-desc">race the room to the target word.</div>
             <div class="app-status app-status--live"><span class="app-status-dot" aria-hidden="true"></span>free on the App Store</div>
+          </div>
+          <span class="app-chevron" aria-hidden="true">→</span>
+        </a>
+        <a href="/mango/" class="app-card app-card--mango">
+          <span class="app-wordmark" aria-hidden="true">mango.</span>
+          <div class="app-info">
+            <div class="app-name">mango <span class="accent">· for the living room</span></div>
+            <div class="app-desc">a household-owned TV experience on Raspberry Pi 5.</div>
+            <div class="app-status app-status--soon"><span class="app-status-dot" aria-hidden="true"></span>self-hosted alpha</div>
           </div>
           <span class="app-chevron" aria-hidden="true">→</span>
         </a>
