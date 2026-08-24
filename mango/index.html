@@ -8,15 +8,15 @@
     <title>mango &middot; reclaim your TV</title>
     <meta
       name="description"
-      content="mango is a household-owned TV experience for Raspberry Pi 5. browse movies, shows, youtube, and optional live television; search across them; choose a stream; and keep library state local."
+      content="mango is a household-owned TV experience for Raspberry Pi 5. browse movies, shows, youtube, and optional live television; inspect a title; press B; watch in native mpv. self-hosted public alpha."
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="mango &middot; by aaam.dev" />
+    <meta property="og:site_name" content="mango · by aaam.dev" />
     <meta property="og:title" content="mango · reclaim your TV" />
     <meta
       property="og:description"
-      content="one household-owned surface for movies, shows, youtube, optional live television, local taste, and a phone librarian."
+      content="a household-owned TV experience on Raspberry Pi 5. build it from source. apache-2.0 public alpha."
     />
     <meta property="og:url" content="https://aaam.dev/mango/" />
     <meta property="og:image" content="https://aaam.dev/mango/images/og-cover.png" />
@@ -29,7 +29,7 @@
     <meta name="twitter:title" content="mango · reclaim your TV" />
     <meta
       name="twitter:description"
-      content="a household-owned TV experience running on Raspberry Pi 5."
+      content="a household-owned TV experience on Raspberry Pi 5. self-hosted public alpha."
     />
     <meta name="twitter:image" content="https://aaam.dev/mango/images/og-cover.png" />
 
@@ -52,9 +52,9 @@
           "@type": "SoftwareApplication",
           "@id": "https://aaam.dev/mango/#software",
           "name": "mango",
-          "alternateName": "mango · TV on your terms",
+          "alternateName": "mango · reclaim your TV",
           "url": "https://aaam.dev/mango/",
-          "description": "A household-owned, couch-first TV experience for Raspberry Pi 5 with unified browse and search, native mpv playback, local library state, household recommendations, and an optional phone librarian.",
+          "description": "A household-owned, couch-first TV experience for Raspberry Pi 5 with unified browse and search, native mpv playback, local library state, household recommendations, and an optional phone librarian. Self-hosted public alpha.",
           "applicationCategory": "MultimediaApplication",
           "operatingSystem": "Raspberry Pi OS",
           "softwareRequirements": "Raspberry Pi 5, Raspberry Pi OS Desktop, X11, Openbox, Chromium, mpv",
@@ -66,6 +66,8 @@
           ],
           "codeRepository": "https://github.com/4m4n5/mango",
           "downloadUrl": "https://github.com/4m4n5/mango",
+          "softwareVersion": "0.1.0-alpha.1",
+          "releaseNotes": "https://github.com/4m4n5/mango/releases",
           "license": "https://www.apache.org/licenses/LICENSE-2.0",
           "publisher": { "@id": "https://aaam.dev/#org" }
         },
@@ -94,8 +96,8 @@
     <header class="topbar">
       <a href="#top" class="brand" aria-label="mango home">mango<span aria-hidden="true">.</span></a>
       <nav class="topnav" aria-label="primary">
+        <a href="#build">build</a>
         <a href="#experience">experience</a>
-        <a href="#principles">principles</a>
         <a href="https://github.com/4m4n5/mango">source</a>
       </nav>
     </header>
@@ -105,8 +107,8 @@
         <p class="eyebrow">mango &middot; for the living room</p>
         <h1>reclaim your <span class="hero-accent">TV.</span></h1>
         <p class="hero-sub">
-          a household-owned TV experience for Raspberry Pi 5. movies, shows,
-          youtube, and optional live television in one place.
+          a household-owned TV experience for Raspberry Pi 5. browse, inspect,
+          press B, and watch in native mpv. library state stays on the device.
         </p>
 
         <div class="hero-stage">
@@ -114,7 +116,7 @@
             src="images/tv-home-960.webp"
             srcset="images/tv-home-960.webp 960w, images/tv-home-1920.webp 1920w"
             sizes="(max-width: 1240px) calc(100vw - 2rem), 1080px"
-            alt="mango Movies Home showing populated Saved and For You rails"
+            alt="mango Movies Home on a television, with local rails and a focused poster"
             width="1920"
             height="1080"
             loading="eager"
@@ -124,21 +126,21 @@
         </div>
 
         <div class="cta-group">
-          <a href="mailto:support@aaam.dev?subject=mango" class="cta-button">get in touch</a>
+          <a href="https://github.com/4m4n5/mango/blob/main/docs/INSTALL.md" class="cta-button">build mango</a>
           <a href="https://github.com/4m4n5/mango" class="cta-button cta-button--secondary">view the source</a>
         </div>
 
         <ul class="trust-row" aria-label="what mango is">
           <li>self-hosted alpha</li>
           <li>raspberry pi 5</li>
-          <li>local library state</li>
+          <li>apache-2.0</li>
           <li>controller-first</li>
         </ul>
       </section>
 
       <section id="experience" class="experience">
         <p class="eyebrow eyebrow-center">inside mango</p>
-        <h2>one surface. eight real views.</h2>
+        <h2>one surface. real captures.</h2>
         <p class="section-intro">
           every frame comes from the current Raspberry Pi interface or phone
           companion. no invented product UI.
@@ -146,35 +148,35 @@
 
         <div class="story-rail" role="list" aria-label="mango product story">
           <figure class="story-card" role="listitem">
-            <img src="images/story/01-product.webp" alt="reclaim your TV — mango Movies Home with Saved and For You" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/01-product.webp" alt="reclaim your TV — mango Movies Home" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
           <figure class="story-card" role="listitem">
-            <img src="images/story/02-breadth.webp" alt="it is all here — mango TV Shows rails with Indian and international series" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/02-breadth.webp" alt="it is all here — one mango launcher, not an app switcher" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
           <figure class="story-card" role="listitem">
-            <img src="images/story/03-search.webp" alt="find anything — four mango Search views for movies, shows, live, and youtube" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/03-search.webp" alt="search across mango — movies, shows, live, and youtube" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
           <figure class="story-card" role="listitem">
-            <img src="images/story/04-streams.webp" alt="watch it at its best — a real RRR detail page with available streams" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/04-streams.webp" alt="inspect then play — a real detail page with available streams" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
           <figure class="story-card" role="listitem">
-            <img src="images/story/05-taste.webp" alt="rate with fire and water — Project Hail Mary detail with saved ratings" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/05-taste.webp" alt="rate with fire and water — local household ratings" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
           <figure class="story-card" role="listitem">
-            <img src="images/story/06-librarian.webp" alt="your content librarian — two phone screens refine a request and open Andhadhun on the TV" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/06-librarian.webp" alt="optional phone librarian that opens detail; B still plays" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
           <figure class="story-card" role="listitem">
-            <img src="images/story/07-youtube.webp" alt="youtube built in — mango youtube recommendations from subscriptions and history" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/07-youtube.webp" alt="youtube built in — household rails, not youtube home" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
           <figure class="story-card" role="listitem">
-            <img src="images/story/08-contact.webp" alt="want to know how mango was built — mango TV Shows Home and contact invitation" width="720" height="960" loading="lazy" decoding="async" />
+            <img src="images/story/08-contact.webp" alt="build mango — self-hosted public alpha on github" width="720" height="960" loading="lazy" decoding="async" />
           </figure>
         </div>
         <p class="rail-hint" aria-hidden="true">&rarr; swipe through mango</p>
       </section>
 
       <section class="features">
-        <p class="eyebrow eyebrow-center">what stays together</p>
+        <p class="eyebrow eyebrow-center">what works today</p>
         <h2>the whole viewing loop.</h2>
 
         <div class="feature-grid">
@@ -186,17 +188,55 @@
           <article class="feature-card">
             <span class="feature-num" aria-hidden="true">02</span>
             <h3>inspect before play.</h3>
-            <p>open Detail, compare available quality, audio, language, and size, then press B to watch in mpv.</p>
+            <p>open Detail, compare available quality, audio, and language, then press B. the launcher stays until mpv proves advancing media.</p>
           </article>
           <article class="feature-card">
             <span class="feature-num" aria-hidden="true">03</span>
             <h3>teach your taste.</h3>
-            <p>Fire and Water ratings shape cached household recommendations. progress, Saved, and history stay local.</p>
+            <p>Fire and Water ratings shape cached household rails. For You appears only when the evidence exists; otherwise you see labelled Top Picks.</p>
           </article>
           <article class="feature-card">
             <span class="feature-num" aria-hidden="true">04</span>
             <h3>ask from your phone.</h3>
-            <p>the optional librarian can clarify, curate, save, and open a title on the TV. the controller still starts playback.</p>
+            <p>the optional librarian can search and open a title on the TV. it does not speak, and it does not start playback.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="build" class="principles">
+        <p class="eyebrow eyebrow-center">how to start</p>
+        <h2>build it. then make it yours.</h2>
+        <p class="section-intro">
+          this is a manual alpha. you bring the pi, the controller, and the
+          accounts. the repository is the product.
+        </p>
+
+        <div class="principle-grid">
+          <article>
+            <h3>1. read the install</h3>
+            <p>
+              <a href="https://github.com/4m4n5/mango/blob/main/docs/GETTING_STARTED.md">getting started</a>
+              and
+              <a href="https://github.com/4m4n5/mango/blob/main/docs/INSTALL.md">the exact setup</a>
+              cover the workstation smoke and the first Pi boot.
+            </p>
+          </article>
+          <article>
+            <h3>2. clone main</h3>
+            <p>
+              source lives at
+              <a href="https://github.com/4m4n5/mango">github.com/4m4n5/mango</a>.
+              public contract is <code>main</code>. apache-2.0.
+            </p>
+          </article>
+          <article>
+            <h3>3. contribute or write</h3>
+            <p>
+              patches:
+              <a href="https://github.com/4m4n5/mango/blob/main/CONTRIBUTING.md">contributing</a>.
+              questions:
+              <a href="mailto:support@aaam.dev?subject=mango">support@aaam.dev</a>.
+            </p>
           </article>
         </div>
       </section>
@@ -208,15 +248,15 @@
         <div class="principle-grid">
           <article>
             <h3>real today</h3>
-            <p>the launcher, unified Search, local library, household rails, phone librarian, and native mpv path are working product surfaces.</p>
+            <p>the launcher, unified Search, local library, household rails, phone librarian, and native mpv path exist in source and have been exercised on a development pi.</p>
           </article>
           <article>
             <h3>you bring</h3>
-            <p>the Raspberry Pi, controller, accounts, addon manifests, credentials, and rights to the media you access.</p>
+            <p>the Raspberry Pi, controller, accounts, addon manifests, credentials, and rights to the media you access. mango does not ship movies, iptv, or debrid.</p>
           </article>
           <article>
             <h3>still open</h3>
-            <p>no-SSH first boot, intentional display sleep, native HDR, and final whole-product couch sign-off.</p>
+            <p>no-SSH first boot, intentional display sleep, native HDR, and whole-product couch sign-off on this public tag.</p>
           </article>
         </div>
 
@@ -230,10 +270,10 @@
 
       <section class="final-cta">
         <p class="eyebrow eyebrow-center">mango &middot; by aaam.dev</p>
-        <h2>want mango in your <span class="hero-accent">living room?</span></h2>
-        <p>get in touch for more information, or follow the source as the appliance takes shape.</p>
+        <h2>ready to <span class="hero-accent">build?</span></h2>
+        <p>start with the install guide. the source is public. contact is optional.</p>
         <div class="cta-group">
-          <a href="mailto:support@aaam.dev?subject=mango" class="cta-button">get in touch</a>
+          <a href="https://github.com/4m4n5/mango/blob/main/docs/INSTALL.md" class="cta-button">install guide</a>
           <a href="https://github.com/4m4n5/mango" class="cta-button cta-button--secondary">github</a>
         </div>
       </section>
@@ -243,8 +283,10 @@
       <p class="footer-brand">mango<span aria-hidden="true">.</span></p>
       <nav aria-label="footer">
         <a href="https://github.com/4m4n5/mango">source</a>
-        <a href="https://github.com/4m4n5/mango/tree/feat/native-experience/docs">docs</a>
-        <a href="mailto:support@aaam.dev">contact</a>
+        <a href="https://github.com/4m4n5/mango/blob/main/docs/README.md">docs</a>
+        <a href="https://github.com/4m4n5/mango/blob/main/docs/STATUS.md">status</a>
+        <a href="https://github.com/4m4n5/mango/blob/main/CONTRIBUTING.md">contribute</a>
+        <a href="mailto:support@aaam.dev?subject=mango">contact</a>
       </nav>
       <p class="footer-meta"><a href="/">aaam.dev</a> &middot; august 2026</p>
     </footer>
