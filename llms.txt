@@ -1,12 +1,12 @@
 # aaam.dev
 
-> A small independent studio making quiet, considered software: **hum** (a private home for couples), **tir** (a live semantic word race), and **mango** (a household-owned TV experience for Raspberry Pi 5).
+> A small independent studio making quiet, considered software: **hum** (a private home for couples), **tir** (a live semantic word race), and **mango** (reclaim your TV — movies, shows, YouTube, and live television on Raspberry Pi 5).
 
 aaam.dev was established May 2026. hum and tir are available free on the Apple App Store and as Android builds. mango is an Apache-2.0 self-hosted alpha, not a finished retail appliance.
 
 ## Projects
 
-- [mango — reclaim your TV](https://aaam.dev/mango/): A couch-first, household-owned TV experience for Raspberry Pi 5. Browse movies, shows, youtube, and optional live television; inspect a title; press B; watch in native mpv. Library state stays local. Self-hosted Apache-2.0 public alpha — not a retail appliance. You provide hardware, accounts, addon manifests, credentials, and media entitlements. Native HDR, no-SSH first boot, display sleep, and whole-product couch sign-off remain open. Install: https://github.com/4m4n5/mango/blob/main/docs/INSTALL.md · Source: https://github.com/4m4n5/mango
+- [mango — reclaim your TV](https://aaam.dev/mango/): Stream movies, shows, YouTube, and live television on a Raspberry Pi 5 you own. Across sources, in one place. Mango adds no ads of its own. Search one query across every mango surface, choose streams, rate with fire and water, and ask a phone librarian. Progress, Saved, and taste stay on the device. Self-hosted Apache-2.0 public alpha — not a retail appliance. You provide hardware, accounts, addon manifests, credentials, and media entitlements. Native HDR, no-SSH first boot, display sleep, and whole-product couch sign-off remain open. Install: https://github.com/4m4n5/mango/blob/main/docs/INSTALL.md · Source: https://github.com/4m4n5/mango
 - [tir — word race](https://aaam.dev/tir/): A fast-twitch live word game. A target word appears; players race to reach it by picking the option closest in meaning (semantic, not spelling). First to the target wins. One always-on global room with real opponents and pure pairwise Elo ranking (the same math chess uses). Free on iOS and Android. No ads, no in-app purchases, no signup. App Store: https://apps.apple.com/us/app/tir-word-race/id6768131124
 - [hum — for two](https://aaam.dev/hum/): A calm, invite-only home for couples. Log mood, track shared habits, decide together, give awards, and trade reasons you love each other. Private to two linked people — no feed, no ads, no subscriptions, no tracking. Free on iOS and Android. App Store: https://apps.apple.com/us/app/hum-for-two/id6768805132
 
